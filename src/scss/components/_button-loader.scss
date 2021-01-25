@@ -1,0 +1,23 @@
+button, a {
+	&.btn-loading {
+		display: flex;
+		align-items: center;
+		position: relative;
+		
+		&:before {
+			content: '';
+			box-sizing: border-box;
+			position: absolute;
+			top: 50%;
+			right: remy(16);
+			width: remy(20);
+			height: remy(20);
+			margin-top: remy(-10);
+			margin-left: remy(-10);
+			border-radius: 50%;
+			border: 2px solid $gray;
+			border-top-color: $red;
+			@include animation(spinner .6s linear infinite);
+		}
+	}
+}

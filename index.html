@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Loaders</title>
+	<!-- Compressed Boostrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+	<!-- Compressed Main CSS -->
+	<link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+<body class="page">
+	<div class="container">
+		<form class="form">
+			<div class="mb-3">
+				<label for="email" class="form-label">Email</label>
+				<input type="email" class="form-control" id="email" placeholder="name@example.com" />
+			</div>
+			<div class="mb-3">
+				<label for="description" class="form-label">Description</label>
+				<input type="password" id="password" class="form-control" placeholder="Password" />
+			</div>
+			<div class="mb-3">
+				<button class="btn btn-lg btn-primary btn_submit" type="submit">Sign in</button>
+			</div>
+		</form>
+	</div>
+
+	<!-- Full Page Loader -->
+	<div class="full_page_loader">
+		<div class="loader"></div>
+		<div class="loader_section left"></div>
+		<div class="loader_section right"></div>
+	</div>
+
+	<script>
+		let body = document.body;
+		let button = document.querySelector('.btn_submit');
+		
+		setTimeout(() => {
+			body.classList.add("loaded");
+		}, 4000);
+
+		button.addEventListener('click', (e) =>{
+			e.preventDefault();
+
+			let button = e.target;
+
+			button.classList.toggle('btn-loading');
+		});
+	</script>
+</body>
+</html>

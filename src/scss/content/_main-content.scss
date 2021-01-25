@@ -1,0 +1,23 @@
+.page {
+  .form {
+    padding-top: remy(40);
+    padding-bottom: remy(40);
+    width: 100%;
+
+    .btn_submit {
+      display: flex;
+      background-color: $black;
+      color: $white;
+      border: none;
+      outline: none;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      @include desktop{
+        max-width: remy(300);
+    }
+    }
+  }
+}
