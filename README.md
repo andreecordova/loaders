@@ -1,5 +1,4 @@
 # loaders
-==================================
 
 A simple project to show how everybody can make loaders in css.
 
